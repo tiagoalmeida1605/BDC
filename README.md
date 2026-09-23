@@ -29,10 +29,6 @@
 - **Formato:** sorteio — os 16 primeiros inscritos são sorteados para as batalhas
 - **Artistas:** MCs locais da Zona Sul, sorteados na hora
 
-## Antes e depois
-![Antes](img/antes.png)
-![Depois](img/depois.png)
-
 ## Os 4 prompts que mais fizeram diferença
 1. [Prompt 1: estruturação semântica do layout e hierarquia da informação]
 2. [Prompt 2: aplicação rigorosa da paleta neon e tipografia urbana Sedgwick Ave]
