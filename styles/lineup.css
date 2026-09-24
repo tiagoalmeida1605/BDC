@@ -1,7 +1,20 @@
 /* ==========================================================================
    BDC - BATALHA DO CAPAO | lineup.css
-   Estilos exclusivos da pagina de Line-up e Chave de MCs
+   Estilos exclusivos da pagina de Line-up e Chave de MCs (Sem Imagens)
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variaveis Globais e Paleta Oficial (Compatibilidade Direta sem @import)
+   -------------------------------------------------------------------------- */
+:root {
+  --roxo-profundo: #2B0B3F;
+  --roxo-neon: #A020F0;
+  --rosa-neon: #FF2E97;
+  --preto-puro: #0D0D0D;
+  --branco-sujo: #F2F2F2;
+  --fonte-titulos: 'Sedgwick Ave', cursive;
+  --fonte-textos: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
 /* --------------------------------------------------------------------------
    Estrutura da Pagina de Line-up
@@ -35,10 +48,16 @@
 .lineup-titulo {
   font-family: var(--fonte-titulos);
   font-size: clamp(2.8rem, 6vw, 5rem);
-  line-height: 0.95;
+  line-height: 1.05;
   text-transform: uppercase;
   color: var(--branco-sujo);
   margin-bottom: 1.25rem;
+  word-break: break-word;
+}
+
+.palavra-destaque {
+  color: var(--rosa-neon);
+  display: block;
 }
 
 .lineup-subtexto {
@@ -52,7 +71,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Grade Assimetrica de Artistas (Sem cards repetitivos)
+   Grade Tipografica de Artistas (Brutalista, Sem Imagens)
    -------------------------------------------------------------------------- */
 .lineup-grade {
   display: grid;
@@ -64,121 +83,116 @@
 .roster-item {
   background-color: var(--preto-puro);
   border: 2px solid var(--roxo-neon);
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  align-items: stretch;
+  border-left: 8px solid var(--roxo-neon);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  min-height: 270px;
   position: relative;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.15s ease, background-color 0.2s ease;
 }
 
 .roster-item:hover {
   border-color: var(--rosa-neon);
+  border-left-color: var(--rosa-neon);
+  transform: translateY(-2px);
 }
 
 .roster-item.destaque-funcao {
   border-color: var(--rosa-neon);
-  background-color: #13031d;
+  border-left-color: var(--rosa-neon);
+  background-color: #15041c;
 }
 
-.roster-midia {
-  position: relative;
-  background-color: var(--roxo-profundo);
-  overflow: hidden;
-  border-right: 1px solid var(--roxo-profundo);
-}
-
-.roster-foto {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(80%) contrast(1.2) brightness(0.9);
-  transition: filter 0.25s ease;
-}
-
-.roster-item:hover .roster-foto {
-  filter: grayscale(0%) contrast(1.15) brightness(1);
+.roster-cabeca-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--roxo-neon);
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.25rem;
 }
 
 .roster-papel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--preto-puro);
+  background-color: var(--roxo-profundo);
   color: var(--branco-sujo);
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  padding: 0.25rem 0.5rem;
-  border-right: 1px solid var(--roxo-neon);
-  border-bottom: 1px solid var(--roxo-neon);
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--roxo-neon);
 }
 
 .roster-papel.especial {
-  background-color: var(--roxo-neon);
-  color: var(--branco-sujo);
-}
-
-.roster-dados {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.roster-cabeca {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  margin-bottom: 0.25rem;
+  background-color: var(--rosa-neon);
+  color: var(--preto-puro);
+  border-color: var(--rosa-neon);
+  font-weight: 900;
 }
 
 .roster-num {
   font-family: var(--fonte-titulos);
-  font-size: 1.5rem;
+  font-size: 1.85rem;
   color: var(--rosa-neon);
   line-height: 1;
+  letter-spacing: 1px;
+}
+
+.roster-dados {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .roster-nome {
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 1px;
   color: var(--branco-sujo);
-  line-height: 1.2;
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
 }
 
 .roster-origem {
-  font-size: 0.8125rem;
-  color: var(--branco-sujo);
-  opacity: 0.7;
+  font-size: 0.875rem;
+  color: var(--rosa-neon);
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 1.25rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
 }
 
 .roster-detalhes {
-  border-top: 1px dashed rgba(242, 242, 242, 0.18);
-  padding-top: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  border-top: 1px dashed rgba(242, 242, 242, 0.2);
+  padding-top: 1rem;
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
   font-size: 0.8125rem;
 }
 
 .roster-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
   color: var(--branco-sujo);
-  opacity: 0.85;
 }
 
 .roster-info strong {
   color: var(--roxo-neon);
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   font-size: 0.6875rem;
-  letter-spacing: 0.1em;
-  margin-right: 0.35rem;
+  letter-spacing: 0.12em;
+}
+
+.roster-item.destaque-funcao .roster-info strong {
+  color: var(--rosa-neon);
 }
 
 /* --------------------------------------------------------------------------
@@ -208,7 +222,7 @@
 .sorteio-titulo {
   font-family: var(--fonte-titulos);
   font-size: clamp(1.8rem, 3.5vw, 2.75rem);
-  line-height: 1;
+  line-height: 1.05;
   text-transform: uppercase;
   color: var(--branco-sujo);
 }
@@ -235,13 +249,13 @@
   flex-direction: column;
   gap: 0.35rem;
   background-color: var(--preto-puro);
-  border-left: 2px solid var(--rosa-neon);
-  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--rosa-neon);
+  padding: 0.85rem 1.15rem;
 }
 
 .regra-num {
   font-family: var(--fonte-titulos);
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   color: var(--rosa-neon);
   line-height: 1;
 }
@@ -251,18 +265,21 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--branco-sujo);
+  font-weight: 500;
 }
 
 /* --------------------------------------------------------------------------
    Responsividade
    -------------------------------------------------------------------------- */
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .lineup-grade {
     grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
 
   .sorteio-regras {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
@@ -272,13 +289,12 @@
   }
 
   .roster-item {
-    grid-template-columns: 1fr;
+    padding: 1.5rem 1.25rem;
   }
 
-  .roster-midia {
-    height: 190px;
-    border-right: none;
-    border-bottom: 1px solid var(--roxo-neon);
+  .roster-detalhes {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
   }
 
   .sorteio-aviso {

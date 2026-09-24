@@ -52,12 +52,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
-}
-
 /* --------------------------------------------------------------------------
    Cabecalho e Navegacao Superior
    -------------------------------------------------------------------------- */
@@ -169,7 +163,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   Hero Editorial e Assimetrico
+   Hero Editorial e Assimetrico (100% Tipografico)
    -------------------------------------------------------------------------- */
 .hero {
   padding: 3.5rem 2rem 4rem;
@@ -182,13 +176,14 @@ img {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 3rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .hero-conteudo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .tag-localizacao {
@@ -215,7 +210,7 @@ img {
   word-break: break-word;
 }
 
-.hero-titulo .palavra-destaque {
+.palavra-destaque {
   color: var(--rosa-neon);
   display: block;
 }
@@ -293,35 +288,130 @@ img {
   transform: translateY(-2px);
 }
 
-.hero-midia {
+/* --------------------------------------------------------------------------
+   Cartaz Tipografico Brutalista do Hero (Substituto de fotos)
+   -------------------------------------------------------------------------- */
+.hero-cartaz {
+  background-color: var(--preto-puro);
+  border: 3px solid var(--roxo-neon);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.25rem 2rem;
   position: relative;
+  border-left: 8px solid var(--rosa-neon);
+}
+
+.cartaz-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--roxo-profundo);
+  padding-bottom: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.cartaz-selo {
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rosa-neon);
+}
+
+.cartaz-cod {
+  font-family: monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--branco-sujo);
+  background-color: var(--roxo-profundo);
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--roxo-neon);
+}
+
+.cartaz-corpo {
   display: flex;
   flex-direction: column;
 }
 
-.moldura-foto {
-  border: 2px solid var(--roxo-neon);
-  background-color: var(--roxo-profundo);
-  position: relative;
-  overflow: hidden;
-}
-
-.foto-batalha {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  filter: contrast(1.15) brightness(0.95);
-}
-
-.legenda-midia {
-  margin-top: 0.75rem;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
+.cartaz-chamada-alta {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  line-height: 0.85;
   color: var(--branco-sujo);
-  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cartaz-horario {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  color: var(--rosa-neon);
+  margin-bottom: 1.25rem;
+}
+
+.cartaz-divisor {
+  width: 100%;
+  height: 2px;
+  background-color: var(--roxo-neon);
+  margin-bottom: 1.5rem;
+}
+
+.cartaz-frase {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.cartaz-linhas-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: var(--roxo-profundo);
+  padding: 1.25rem;
+  border: 1px solid var(--roxo-neon);
+}
+
+.cartaz-linha {
   display: flex;
   justify-content: space-between;
+  font-size: 0.75rem;
+  border-bottom: 1px dashed rgba(242, 242, 242, 0.2);
+  padding-bottom: 0.35rem;
+}
+
+.cartaz-linha:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cartaz-rotulo {
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--rosa-neon);
+}
+
+.cartaz-dado {
+  font-weight: 700;
+  color: var(--branco-sujo);
+  text-align: right;
+}
+
+.cartaz-base {
+  margin-top: 2rem;
+  border-top: 1px solid var(--roxo-profundo);
+  padding-top: 1rem;
+  font-size: 0.6875rem;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--rosa-neon);
+  text-align: center;
 }
 
 /* --------------------------------------------------------------------------
@@ -507,12 +597,12 @@ img {
   text-align: right;
 }
 
-.rodape-dupla {
+.rodape-equipe {
   font-size: 0.875rem;
   color: var(--branco-sujo);
 }
 
-.rodape-dupla strong {
+.rodape-equipe strong {
   color: var(--rosa-neon);
   font-weight: 600;
 }
@@ -548,10 +638,6 @@ img {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
-  }
-
-  .foto-batalha {
-    aspect-ratio: 16 / 9;
   }
 
   .destaques-grade {

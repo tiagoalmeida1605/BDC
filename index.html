@@ -18,7 +18,7 @@
   <!-- Cabecalho principal -->
   <header class="cabecalho">
     <div class="cabecalho-marca">
-      <a href="#inicio" class="cabecalho-sigla">BDC</a>
+      <a href="index.html" class="cabecalho-sigla">BDC</a>
       <span class="cabecalho-nome">Batalha do Capão</span>
     </div>
 
@@ -30,11 +30,11 @@
     <!-- Navegacao -->
     <nav class="navegacao" id="menuNavegacao">
       <ul class="menu-lista">
-        <li><a href="#inicio" class="menu-link ativo">Início</a></li>
-        <li><a href="#lineup" class="menu-link">Line-up</a></li>
-        <li><a href="#ingressos" class="menu-link">Ingressos</a></li>
-        <li><a href="#informacoes" class="menu-link">Informações</a></li>
-        <li><a href="#faq" class="menu-link">FAQ</a></li>
+        <li><a href="./index.html" class="menu-link ativo">Início</a></li>
+        <li><a href="./pages/lineup.html" class="menu-link">Line-up</a></li>
+        <li><a href="./pages/ingressos.html" class="menu-link">Ingressos</a></li>
+        <li><a href="./pages/informacoes.html" class="menu-link">Informações</a></li>
+        <li><a href="./pages/faq.html" class="menu-link">FAQ</a></li>
       </ul>
     </nav>
   </header>
@@ -49,7 +49,7 @@
   <!-- Conteudo principal -->
   <main id="inicio">
 
-    <!-- Secao Hero com composicao assimetrica -->
+    <!-- Secao Hero com composicao assimetrica e puramente tipografica -->
     <section class="hero">
       <div class="hero-grid">
         <div class="hero-conteudo">
@@ -78,25 +78,48 @@
             </div>
           </div>
 
-          <a href="#informacoes" class="botao-destaque">
+          <a href="informacoes.html" class="botao-destaque">
             Garantir Presença na Roda
           </a>
         </div>
 
-        <div class="hero-midia">
-          <div class="moldura-foto">
-            <img src="./assets/hero.jpg" alt="Roda de batalha de rima noturna na área externa do Metrô Capão Redondo com MC rimando no microfone" class="foto-batalha">
+        <!-- Cartaz tipografico brutalista substituindo imagens -->
+        <div class="hero-cartaz" aria-label="Manifesto de Asfalto BDC">
+          <div class="cartaz-topo">
+            <span class="cartaz-selo">EDIÇÃO SEMANAL</span>
+            <span class="cartaz-cod">ZS-058</span>
           </div>
-          <div class="legenda-midia">
-            <span>Foto da Roda Oficial</span>
-            <span>Edição Noturna</span>
+          <div class="cartaz-corpo">
+            <span class="cartaz-chamada-alta">TERÇA</span>
+            <span class="cartaz-horario">19:00H</span>
+            <div class="cartaz-divisor"></div>
+            <p class="cartaz-frase">
+              SEM CATRACA &bull; SEM SCRIPT &bull; SEM CENSURA
+            </p>
+            <div class="cartaz-linhas-info">
+              <div class="cartaz-linha">
+                <span class="cartaz-rotulo">LOCAL</span>
+                <span class="cartaz-dado">METRÔ CAPÃO REDONDO</span>
+              </div>
+              <div class="cartaz-linha">
+                <span class="cartaz-rotulo">LINHA</span>
+                <span class="cartaz-dado">5–LILÁS &bull; PRAÇA EXTERNA</span>
+              </div>
+              <div class="cartaz-linha">
+                <span class="cartaz-rotulo">DISPUTA</span>
+                <span class="cartaz-dado">16 MCs &bull; MATA-MATA</span>
+              </div>
+            </div>
+          </div>
+          <div class="cartaz-base">
+            <span>RESPEITO &bull; RIMA &bull; FUNDAMENTO</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Secao de Destaques Editoriais -->
-    <section class="destaques" id="informacoes">
+    <section class="destaques">
       <div class="destaques-container">
         <div class="secao-cabecalho">
           <h2 class="secao-titulo">Dinâmica da Batalha</h2>
@@ -138,7 +161,7 @@
     </section>
 
     <!-- Manifesto e ideologia -->
-    <section class="manifesto" id="lineup">
+    <section class="manifesto">
       <div class="manifesto-box">
         <p class="manifesto-texto">
           A BDC não é espetáculo de vitrine. É <strong>batalha de fundamento</strong>, onde cada verso carrega a vivência, o peso e a resistência de quem vive a Zona Sul no dia a dia.
@@ -148,8 +171,8 @@
 
   </main>
 
-  <!-- Rodape estruturado -->
-  <footer class="rodape" id="faq">
+  <!-- Rodape estruturado com creditos do trio -->
+  <footer class="rodape">
     <div class="rodape-principal">
       <div class="rodape-festival">
         <span class="rodape-nome">BDC – Batalha do Capão</span>
@@ -157,7 +180,7 @@
       </div>
 
       <div class="rodape-creditos">
-        <span class="rodape-dupla">Projeto desenvolvido por <strong>[Nome 1]</strong> e <strong>[Nome 2]</strong></span>
+        <span class="rodape-equipe">Projeto desenvolvido pelo trio: <strong>Tiago Silvestre</strong>, <strong>João Pedro</strong> e <strong>Alexandre</strong></span>
         <span class="rodape-ano">Temporada 2026</span>
       </div>
     </div>
@@ -168,18 +191,7 @@
     </div>
   </footer>
 
-  <!-- Script minimo para funcionamento do menu mobile -->
-  <script>
-    (function () {
-      var botao = document.getElementById('menuToggle');
-      var menu = document.getElementById('menuNavegacao');
-      if (botao && menu) {
-        botao.addEventListener('click', function () {
-          var aberto = menu.classList.toggle('aberto');
-          botao.setAttribute('aria-expanded', aberto ? 'true' : 'false');
-        });
-      }
-    })();
-  </script>
+  <!-- Script compartilhado para funcionamento do menu mobile -->
+  <script src="./script.js"></script>
 </body>
 </html>
