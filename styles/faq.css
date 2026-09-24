@@ -1,0 +1,260 @@
+/* ==========================================================================
+   BDC - BATALHA DO CAPAO | faq.css
+   Estilos exclusivos da pagina de Perguntas Frequentes e Contato
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Estrutura Geral
+   -------------------------------------------------------------------------- */
+.faq-pagina {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+  width: 100%;
+}
+
+.faq-topo {
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--roxo-neon);
+  padding-bottom: 2rem;
+}
+
+.faq-etiqueta {
+  display: inline-block;
+  background-color: var(--roxo-profundo);
+  border: 1px solid var(--roxo-neon);
+  color: var(--rosa-neon);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.faq-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  margin-bottom: 1.25rem;
+}
+
+.faq-subtexto {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--branco-sujo);
+  opacity: 0.9;
+  max-width: 52ch;
+  border-left: 3px solid var(--rosa-neon);
+  padding-left: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Grade Principal (FAQ a esquerda, Formulario a direita)
+   -------------------------------------------------------------------------- */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* --------------------------------------------------------------------------
+   Lista de Perguntas
+   -------------------------------------------------------------------------- */
+.faq-secao-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  margin-bottom: 1.5rem;
+}
+
+.perguntas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  background-color: var(--preto-puro);
+  border: 1px solid var(--roxo-profundo);
+  border-left: 3px solid var(--roxo-neon);
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  transition: border-left-color 0.2s ease;
+}
+
+.faq-item:hover {
+  border-left-color: var(--rosa-neon);
+}
+
+.faq-numero {
+  font-family: var(--fonte-titulos);
+  font-size: 1.75rem;
+  color: var(--rosa-neon);
+  line-height: 1;
+  shrink: 0;
+}
+
+.faq-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faq-pergunta {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--branco-sujo);
+  line-height: 1.35;
+}
+
+.faq-resposta {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--branco-sujo);
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   Formulario de Contato Brutalista
+   -------------------------------------------------------------------------- */
+.contato-caixa {
+  background-color: var(--roxo-profundo);
+  border: 2px solid var(--roxo-neon);
+  padding: 2.5rem 2rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.contato-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: var(--rosa-neon);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contato-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: 2.25rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  margin-bottom: 0.75rem;
+}
+
+.contato-sub {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--branco-sujo);
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--branco-sujo);
+}
+
+.campo-input,
+.campo-select,
+.campo-textarea {
+  background-color: var(--preto-puro);
+  border: 1px solid var(--roxo-neon);
+  color: var(--branco-sujo);
+  font-family: var(--fonte-textos);
+  font-size: 0.875rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.campo-input:focus,
+.campo-select:focus,
+.campo-textarea:focus {
+  border-color: var(--rosa-neon);
+}
+
+.campo-select {
+  cursor: pointer;
+}
+
+.campo-select option {
+  background-color: var(--preto-puro);
+  color: var(--branco-sujo);
+}
+
+.campo-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.botao-enviar {
+  background-color: var(--roxo-neon);
+  color: var(--branco-sujo);
+  font-family: var(--fonte-textos);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 1.125rem;
+  border: none;
+  cursor: pointer;
+  border-bottom: 4px solid var(--rosa-neon);
+  margin-top: 0.5rem;
+  transition: transform 0.1s ease, background-color 0.15s ease;
+}
+
+.botao-enviar:hover,
+.botao-enviar:focus {
+  background-color: var(--rosa-neon);
+  border-bottom-color: var(--branco-sujo);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsividade
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-caixa {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .faq-pagina {
+    padding: 2rem 1.25rem 3.5rem;
+  }
+
+  .contato-caixa {
+    padding: 2rem 1.25rem;
+  }
+}

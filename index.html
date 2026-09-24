@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BDC – Batalha do Capão</title>
+  <meta name="description" content="Batalha de rima e rap improvisado toda terça-feira às 19h na área externa do Metrô Capão Redondo, Zona Sul de São Paulo.">
+  
+  <!-- Fontes do Google: Sedgwick Ave para titulos e Inter para textos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabecalho principal -->
+  <header class="cabecalho">
+    <div class="cabecalho-marca">
+      <a href="#inicio" class="cabecalho-sigla">BDC</a>
+      <span class="cabecalho-nome">Batalha do Capão</span>
+    </div>
+
+    <!-- Botao mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+      Menu
+    </button>
+
+    <!-- Navegacao -->
+    <nav class="navegacao" id="menuNavegacao">
+      <ul class="menu-lista">
+        <li><a href="#inicio" class="menu-link ativo">Início</a></li>
+        <li><a href="#lineup" class="menu-link">Line-up</a></li>
+        <li><a href="#ingressos" class="menu-link">Ingressos</a></li>
+        <li><a href="#informacoes" class="menu-link">Informações</a></li>
+        <li><a href="#faq" class="menu-link">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Faixa de aviso urbano -->
+  <div class="faixa-aviso" role="complementary">
+    <span>Circuito Zona Sul de Hip-Hop</span>
+    <span class="destaque-linha">Área Externa &bull; Linha 5–Lilás</span>
+    <span>Sem ingresso pago &bull; Acesso livre</span>
+  </div>
+
+  <!-- Conteudo principal -->
+  <main id="inicio">
+
+    <!-- Secao Hero com composicao assimetrica -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-conteudo">
+          <span class="tag-localizacao">Zona Sul &bull; São Paulo</span>
+          
+          <h1 class="hero-titulo">
+            Batalha <span class="palavra-destaque">do Capão</span>
+          </h1>
+
+          <p class="chamada-principal">
+            A voz da quebrada no mic aberto. Ritmo, ideologia periférica e improviso cru no asfalto da Sul.
+          </p>
+
+          <div class="hero-coordenadas">
+            <div class="dado-evento">
+              <span class="rotulo-dado">Data e Horário</span>
+              <span class="valor-dado">Toda terça, 19h</span>
+            </div>
+            <div class="dado-evento">
+              <span class="rotulo-dado">Ponto de Encontro</span>
+              <span class="valor-dado">Metrô Capão Redondo — Linha 5–Lilás</span>
+            </div>
+            <div class="dado-evento">
+              <span class="rotulo-dado">Formato</span>
+              <span class="valor-dado">16 MCs no sorteio presencial</span>
+            </div>
+          </div>
+
+          <a href="#informacoes" class="botao-destaque">
+            Garantir Presença na Roda
+          </a>
+        </div>
+
+        <div class="hero-midia">
+          <div class="moldura-foto">
+            <img src="./assets/hero.jpg" alt="Roda de batalha de rima noturna na área externa do Metrô Capão Redondo com MC rimando no microfone" class="foto-batalha">
+          </div>
+          <div class="legenda-midia">
+            <span>Foto da Roda Oficial</span>
+            <span>Edição Noturna</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secao de Destaques Editoriais -->
+    <section class="destaques" id="informacoes">
+      <div class="destaques-container">
+        <div class="secao-cabecalho">
+          <h2 class="secao-titulo">Dinâmica da Batalha</h2>
+          <span class="secao-subtitulo">Regras de Rua &bull; Temporada 2026</span>
+        </div>
+
+        <div class="destaques-grade">
+          <article class="destaque-coluna">
+            <div>
+              <div class="destaque-indice">01</div>
+              <h3 class="destaque-nome">16 MCs sorteados na hora</h3>
+            </div>
+            <p class="destaque-texto">
+              Inscrição por ordem de chegada a partir das 18h30. Os 16 primeiros nomes entram na chave oficial de mata-mata sem favorecimento.
+            </p>
+          </article>
+
+          <article class="destaque-coluna">
+            <div>
+              <div class="destaque-indice">02</div>
+              <h3 class="destaque-nome">Palco aberto pra quebrada</h3>
+            </div>
+            <p class="destaque-texto">
+              O microfone é território coletivo. Espaço para MCs da Zona Sul mandarem rimas de sangue ou conhecimento com respeito à raiz do hip-hop.
+            </p>
+          </article>
+
+          <article class="destaque-coluna">
+            <div>
+              <div class="destaque-indice">03</div>
+              <h3 class="destaque-nome">Entrada gratuita e na rua</h3>
+            </div>
+            <p class="destaque-texto">
+              Cultura periférica não cobra catraca. O evento acontece no espaço público da estação com barulho, plateia ativa e júri popular.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manifesto e ideologia -->
+    <section class="manifesto" id="lineup">
+      <div class="manifesto-box">
+        <p class="manifesto-texto">
+          A BDC não é espetáculo de vitrine. É <strong>batalha de fundamento</strong>, onde cada verso carrega a vivência, o peso e a resistência de quem vive a Zona Sul no dia a dia.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodape estruturado -->
+  <footer class="rodape" id="faq">
+    <div class="rodape-principal">
+      <div class="rodape-festival">
+        <span class="rodape-nome">BDC – Batalha do Capão</span>
+        <span class="rodape-local">Metrô Capão Redondo &bull; Linha 5–Lilás &bull; Zona Sul / SP</span>
+      </div>
+
+      <div class="rodape-creditos">
+        <span class="rodape-dupla">Projeto desenvolvido por <strong>[Nome 1]</strong> e <strong>[Nome 2]</strong></span>
+        <span class="rodape-ano">Temporada 2026</span>
+      </div>
+    </div>
+
+    <div class="rodape-secundario">
+      <span>Cultura Hip-Hop Independente</span>
+      <span>Sem fins lucrativos &bull; Toda terça-feira às 19h</span>
+    </div>
+  </footer>
+
+  <!-- Script minimo para funcionamento do menu mobile -->
+  <script>
+    (function () {
+      var botao = document.getElementById('menuToggle');
+      var menu = document.getElementById('menuNavegacao');
+      if (botao && menu) {
+        botao.addEventListener('click', function () {
+          var aberto = menu.classList.toggle('aberto');
+          botao.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

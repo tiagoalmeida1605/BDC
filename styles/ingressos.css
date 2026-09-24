@@ -1,0 +1,333 @@
+/* ==========================================================================
+   BDC - BATALHA DO CAPAO | ingressos.css
+   Estilos exclusivos da pagina de Ingressos e Apoio Financeiro
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Estrutura Geral
+   -------------------------------------------------------------------------- */
+.ingressos-pagina {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+  width: 100%;
+}
+
+.ingressos-topo {
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--roxo-neon);
+  padding-bottom: 2rem;
+}
+
+.ingressos-etiqueta {
+  display: inline-block;
+  background-color: var(--roxo-profundo);
+  border: 1px solid var(--roxo-neon);
+  color: var(--rosa-neon);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.ingressos-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  margin-bottom: 1.25rem;
+}
+
+.ingressos-subtexto {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--branco-sujo);
+  opacity: 0.9;
+  max-width: 52ch;
+  border-left: 3px solid var(--rosa-neon);
+  padding-left: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Colunas de Setores (Sem aparencia de SaaS / Sem cantos arredondados)
+   -------------------------------------------------------------------------- */
+.setores-grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4.5rem;
+  align-items: stretch;
+}
+
+.setor-coluna {
+  background-color: var(--preto-puro);
+  border: 2px solid var(--roxo-neon);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.setor-coluna.destaque-apoio {
+  border-color: var(--rosa-neon);
+  background-color: #120419;
+}
+
+.etiqueta-destaque {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background-color: var(--rosa-neon);
+  color: var(--preto-puro);
+  font-size: 0.6875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 0.3rem 0.75rem;
+}
+
+.setor-cabeca {
+  border-bottom: 2px solid var(--roxo-profundo);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.setor-tipo {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--rosa-neon);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.setor-nome {
+  font-family: var(--fonte-titulos);
+  font-size: 2.1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  margin-bottom: 1.25rem;
+}
+
+.preco-bloco {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.moeda {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--rosa-neon);
+}
+
+.valor {
+  font-family: var(--fonte-titulos);
+  font-size: 3.75rem;
+  line-height: 0.9;
+  color: var(--branco-sujo);
+  letter-spacing: 1px;
+}
+
+.periodicidade {
+  font-size: 0.8125rem;
+  color: var(--branco-sujo);
+  opacity: 0.65;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.setor-resumo {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--branco-sujo);
+  opacity: 0.85;
+  margin-bottom: 1.75rem;
+  min-height: 48px;
+}
+
+.setor-itens {
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.itens-titulo {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--roxo-neon);
+  margin-bottom: 1rem;
+}
+
+.lista-itens {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.lista-itens li {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--branco-sujo);
+  opacity: 0.9;
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.lista-itens li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 6px;
+  height: 2px;
+  background-color: var(--rosa-neon);
+}
+
+.setor-acao {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--roxo-profundo);
+  padding-top: 1.5rem;
+}
+
+.botao-setor {
+  display: block;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.botao-setor.destaque {
+  background-color: var(--roxo-neon);
+  color: var(--branco-sujo);
+  border: 1px solid var(--roxo-neon);
+  border-bottom: 4px solid var(--rosa-neon);
+}
+
+.botao-setor.destaque:hover {
+  background-color: var(--rosa-neon);
+  border-bottom-color: var(--branco-sujo);
+}
+
+.botao-setor.neutro {
+  background-color: transparent;
+  color: var(--branco-sujo);
+  border: 1px solid var(--roxo-neon);
+}
+
+.botao-setor.neutro:hover {
+  border-color: var(--rosa-neon);
+  color: var(--rosa-neon);
+}
+
+/* --------------------------------------------------------------------------
+   Transparencia da Arrecadacao
+   -------------------------------------------------------------------------- */
+.transparencia-bloco {
+  background-color: var(--roxo-profundo);
+  border: 2px solid var(--roxo-neon);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.transparencia-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+  color: var(--rosa-neon);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.transparencia-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  margin-bottom: 1rem;
+}
+
+.transparencia-texto {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--branco-sujo);
+  opacity: 0.88;
+}
+
+.divisao-metas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.meta-item {
+  background-color: var(--preto-puro);
+  border-left: 3px solid var(--rosa-neon);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.meta-porcento {
+  font-family: var(--fonte-titulos);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--rosa-neon);
+}
+
+.meta-rotulo {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--branco-sujo);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Responsividade
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .setores-grade {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .transparencia-bloco {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .ingressos-pagina {
+    padding: 2rem 1.25rem 3.5rem;
+  }
+
+  .setor-coluna {
+    padding: 2rem 1.25rem;
+  }
+
+  .transparencia-bloco {
+    padding: 1.75rem 1.25rem;
+  }
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Line-up &bull; BDC – Batalha do Capão</title>
+  <meta name="description" content="Chave da noite, MCs convidados, DJ residente, apresentação e sorteio presencial da Batalha do Capão.">
+  
+  <!-- Fontes do Google: Sedgwick Ave para titulos e Inter para textos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/lineup.css">
+</head>
+<body>
+
+  <!-- Cabecalho principal -->
+  <header class="cabecalho">
+    <div class="cabecalho-marca">
+      <a href="index.html" class="cabecalho-sigla">BDC</a>
+      <span class="cabecalho-nome">Batalha do Capão</span>
+    </div>
+
+    <!-- Botao mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+      Menu
+    </button>
+
+    <!-- Navegacao -->
+    <nav class="navegacao" id="menuNavegacao">
+      <ul class="menu-lista">
+        <li><a href="../index.html" class="menu-link">Início</a></li>
+        <li><a href="./lineup.html" class="menu-link ativo">Line-up</a></li>
+        <li><a href="./ingressos.html" class="menu-link">Ingressos</a></li>
+        <li><a href="./informacoes.html" class="menu-link">Informações</a></li>
+        <li><a href="./faq.html" class="menu-link">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Faixa de aviso urbano -->
+  <div class="faixa-aviso" role="complementary">
+    <span>Sorteio Presencial &bull; 16 Vagas</span>
+    <span class="destaque-linha">Inscrição às 18h30 na Praça do Metrô</span>
+    <span>Sem Regalia &bull; Só Rima de Fundamento</span>
+  </div>
+
+  <!-- Conteudo principal -->
+  <main class="lineup-pagina">
+
+    <!-- Abertura editorial -->
+    <section class="lineup-topo">
+      <span class="lineup-etiqueta">Edição Semanal &bull; Chave Oficial</span>
+      <h1 class="lineup-titulo">
+        Quem segura <span class="palavra-destaque">o mic na sul</span>
+      </h1>
+      <p class="lineup-subtexto">
+        O asfalto não aceita pose. A escalação reúne nomes de peso da Zona Sul, o comando dos toca-discos, a voz do mestre de cerimônias e as vagas abertas no sorteio de rua.
+      </p>
+    </section>
+
+    <!-- Grade assimetrica do line-up -->
+    <section class="lineup-grade" aria-label="Escalação da Batalha">
+
+      <!-- 01: MC Convidado -->
+      <article class="roster-item">
+        <div class="roster-midia">
+          <img src="img/mc-01.jpg" alt="Retrato expressivo de MC Magrão na roda" class="roster-foto">
+          <span class="roster-papel">MC Convidado</span>
+        </div>
+        <div class="roster-dados">
+          <div class="roster-cabeca">
+            <span class="roster-num">01</span>
+            <h2 class="roster-nome">MC Magrão</h2>
+          </div>
+          <p class="roster-origem">Capão Redondo &bull; Freestyle de Sangue</p>
+          <div class="roster-detalhes">
+            <span class="roster-info"><strong>Dia:</strong> Toda terça</span>
+            <span class="roster-info"><strong>Horário:</strong> Chave 19h45</span>
+            <span class="roster-info"><strong>Palco:</strong> Asfalto Central</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02: MC Convidada -->
+      <article class="roster-item">
+        <div class="roster-midia">
+          <img src="img/mc-02.jpg" alt="Retrato expressivo de MC Sarah no mic" class="roster-foto">
+          <span class="roster-papel">MC Convidada</span>
+        </div>
+        <div class="roster-dados">
+          <div class="roster-cabeca">
+            <span class="roster-num">02</span>
+            <h2 class="roster-nome">MC Sarah</h2>
+          </div>
+          <p class="roster-origem">Fundão da Sul &bull; Rima de Conhecimento</p>
+          <div class="roster-detalhes">
+            <span class="roster-info"><strong>Dia:</strong> Toda terça</span>
+            <span class="roster-info"><strong>Horário:</strong> Chave 20h00</span>
+            <span class="roster-info"><strong>Palco:</strong> Asfalto Central</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03: DJ Residente -->
+      <article class="roster-item destaque-funcao">
+        <div class="roster-midia">
+          <img src="img/mc-05.jpg" alt="DJ Kiko Beats operando os toca-discos" class="roster-foto">
+          <span class="roster-papel especial">DJ Residente</span>
+        </div>
+        <div class="roster-dados">
+          <div class="roster-cabeca">
+            <span class="roster-num">03</span>
+            <h2 class="roster-nome">DJ Kiko Beats</h2>
+          </div>
+          <p class="roster-origem">Jardim Comercial &bull; Boom Bap &amp; 140 BPM</p>
+          <div class="roster-detalhes">
+            <span class="roster-info"><strong>Dia:</strong> Toda terça</span>
+            <span class="roster-info"><strong>Horário:</strong> 19h00 (Abertura)</span>
+            <span class="roster-info"><strong>Palco:</strong> Tenda de Som</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04: Apresentador -->
+      <article class="roster-item destaque-funcao">
+        <div class="roster-midia">
+          <img src="img/mc-06.jpg" alt="Apresentador Zóio comandando a roda com microfone" class="roster-foto">
+          <span class="roster-papel especial">Apresentador</span>
+        </div>
+        <div class="roster-dados">
+          <div class="roster-cabeca">
+            <span class="roster-num">04</span>
+            <h2 class="roster-nome">Zóio da Sul</h2>
+          </div>
+          <p class="roster-origem">Vila Fundão &bull; Voz da Roda &amp; Cronômetro</p>
+          <div class="roster-detalhes">
+            <span class="roster-info"><strong>Dia:</strong> Toda terça</span>
+            <span class="roster-info"><strong>Horário:</strong> 19h15 (Chamada)</span>
+            <span class="roster-info"><strong>Palco:</strong> Centro da Roda</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05: MC Convidado -->
+      <article class="roster-item">
+        <div class="roster-midia">
+          <img src="img/mc-03.jpg" alt="Retrato expressivo de MC Brenuz" class="roster-foto">
+          <span class="roster-papel">MC Convidado</span>
+        </div>
+        <div class="roster-dados">
+          <div class="roster-cabeca">
+            <span class="roster-num">05</span>
+            <h2 class="roster-nome">MC Brenuz</h2>
+          </div>
+          <p class="roster-origem">Campo Limpo &bull; Ataque Rápido &amp; Métrica</p>
+          <div class="roster-detalhes">
+            <span class="roster-info"><strong>Dia:</strong> Toda terça</span>
+            <span class="roster-info"><strong>Horário:</strong> Chave 20h15</span>
+            <span class="roster-info"><strong>Palco:</strong> Asfalto Central</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06: MC Convidado -->
+      <article class="roster-item">
+        <div class="roster-midia">
+          <img src="img/mc-04.jpg" alt="Retrato expressivo de MC Tubarão" class="roster-foto">
+          <span class="roster-papel">MC Convidado</span>
+        </div>
+        <div class="roster-dados">
+          <div class="roster-cabeca">
+            <span class="roster-num">06</span>
+            <h2 class="roster-nome">MC Tubarão</h2>
+          </div>
+          <p class="roster-origem">Jardim Ângela &bull; Resposta Crua</p>
+          <div class="roster-detalhes">
+            <span class="roster-info"><strong>Dia:</strong> Toda terça</span>
+            <span class="roster-info"><strong>Horário:</strong> Chave 20h30</span>
+            <span class="roster-info"><strong>Palco:</strong> Asfalto Central</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07: Jurada Convidada -->
+      <article class="roster-item destaque-funcao">
+        <div class="roster-midia">
+          <img src="img/mc-07.jpg" alt="Kelly ZS atenta ao duelo de rimas" class="roster-foto">
+          <span class="roster-papel especial">Júri Convidado</span>
+        </div>
+        <div class="roster-dados">
+          <div class="roster-cabeca">
+            <span class="roster-num">07</span>
+            <h2 class="roster-nome">Kelly ZS</h2>
+          </div>
+          <p class="roster-origem">Parque Santo Antônio &bull; Avaliação de Conteúdo</p>
+          <div class="roster-detalhes">
+            <span class="roster-info"><strong>Dia:</strong> Toda terça</span>
+            <span class="roster-info"><strong>Horário:</strong> 19h30</span>
+            <span class="roster-info"><strong>Palco:</strong> Bancada Lateral</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 08: MC Convidado -->
+      <article class="roster-item">
+        <div class="roster-midia">
+          <img src="img/mc-08.jpg" alt="Retrato de MC Dinho rimando" class="roster-foto">
+          <span class="roster-papel">MC Convidado</span>
+        </div>
+        <div class="roster-dados">
+          <div class="roster-cabeca">
+            <span class="roster-num">08</span>
+            <h2 class="roster-nome">MC Dinho ZS</h2>
+          </div>
+          <p class="roster-origem">Valo Velho &bull; Levada Pesada</p>
+          <div class="roster-detalhes">
+            <span class="roster-info"><strong>Dia:</strong> Toda terça</span>
+            <span class="roster-info"><strong>Horário:</strong> Chave 20h45</span>
+            <span class="roster-info"><strong>Palco:</strong> Asfalto Central</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Bloco das 8 vagas abertas por sorteio -->
+    <section class="sorteio-aviso">
+      <div class="sorteio-container">
+        <span class="sorteio-tag">Vagas 09 a 16 &bull; Sorteio Presencial</span>
+        <h3 class="sorteio-titulo">O restante da chave é sorteado na hora</h3>
+        <p class="sorteio-descricao">
+          Aqui ninguém entra com nome garantido por amizade. Quem quer rimar encosta na mesa da organização às 18h30. Os nomes entram na urna transparente e são sorteados na frente de toda a plateia pelo Zóio antes da primeira batida.
+        </p>
+        <div class="sorteio-regras">
+          <div class="sorteio-regra-item">
+            <span class="regra-num">18h30</span>
+            <span class="regra-txt">Abertura da folha de inscrição</span>
+          </div>
+          <div class="sorteio-regra-item">
+            <span class="regra-num">18h50</span>
+            <span class="regra-txt">Sorteio das 8 vagas restantes</span>
+          </div>
+          <div class="sorteio-regra-item">
+            <span class="regra-num">19h15</span>
+            <span class="regra-txt">Primeiro round no beat</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodape estruturado -->
+  <footer class="rodape">
+    <div class="rodape-principal">
+      <div class="rodape-festival">
+        <span class="rodape-nome">BDC – Batalha do Capão</span>
+        <span class="rodape-local">Metrô Capão Redondo &bull; Linha 5–Lilás &bull; Zona Sul / SP</span>
+      </div>
+
+      <div class="rodape-creditos">
+        <span class="rodape-dupla">Projeto desenvolvido por <strong>[Nome 1]</strong> e <strong>[Nome 2]</strong></span>
+        <span class="rodape-ano">Temporada 2026</span>
+      </div>
+    </div>
+
+    <div class="rodape-secundario">
+      <span>Cultura Hip-Hop Independente</span>
+      <span>Sem fins lucrativos &bull; Toda terça-feira às 19h</span>
+    </div>
+  </footer>
+
+  <!-- Script compartilhado -->
+  <script src="../script.js"></script>
+</body>
+</html>

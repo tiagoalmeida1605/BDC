@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informações e Local &bull; BDC – Batalha do Capão</title>
+  <meta name="description" content="Localização, mapa, rotas de metrô e ônibus, horários e conduta de rua da Batalha do Capão.">
+  
+  <!-- Fontes do Google: Sedgwick Ave para titulos e Inter para textos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../styles/informacoes.css">
+</head>
+<body>
+
+  <!-- Cabecalho principal -->
+  <header class="cabecalho">
+    <div class="cabecalho-marca">
+      <a href="index.html" class="cabecalho-sigla">BDC</a>
+      <span class="cabecalho-nome">Batalha do Capão</span>
+    </div>
+
+    <!-- Botao mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+      Menu
+    </button>
+
+    <!-- Navegacao -->
+    <nav class="navegacao" id="menuNavegacao">
+      <ul class="menu-lista">
+        <li><a href="../index.html" class="menu-link">Início</a></li>
+        <li><a href="./lineup.html" class="menu-link">Line-up</a></li>
+        <li><a href="./ingressos.html" class="menu-link">Ingressos</a></li>
+        <li><a href="./informacoes.html" class="menu-link ativo">Informações</a></li>
+        <li><a href="./faq.html" class="menu-link">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Faixa de aviso urbano -->
+  <div class="faixa-aviso" role="complementary">
+    <span>Área Externa &bull; Metrô Capão Redondo</span>
+    <span class="destaque-linha">Inscrição 18h30 &bull; Batalha 19h</span>
+    <span>Conexão Linha 5–Lilás &bull; Respeito Máximo</span>
+  </div>
+
+  <!-- Conteudo principal -->
+  <main class="info-pagina">
+
+    <!-- Abertura editorial -->
+    <section class="info-topo">
+      <span class="info-etiqueta">Coordenadas &bull; Guia de Sobrevivência Urbana</span>
+      <h1 class="info-titulo">
+        Como chegar <span class="palavra-destaque">e como proceder</span>
+      </h1>
+      <p class="info-subtexto">
+        Toda terça o ponto de encontro é na saída da estação. Não tem erro de caminho, mas tem regra de conduta. O espaço é público, a batalha é da comunidade e o respeito dita o ritmo.
+      </p>
+    </section>
+
+    <!-- Grade de Localizacao e Rotas -->
+    <section class="local-grade">
+      
+      <!-- Detalhes de Transporte e Horario -->
+      <div class="rotas-coluna">
+        
+        <div class="endereco-bloco">
+          <span class="sub-etiqueta">Ponto Oficial</span>
+          <h2 class="endereco-titulo">Estação Metrô Capão Redondo</h2>
+          <p class="endereco-linha">Linha 5–Lilás (Área externa da estação / Praça de acesso)</p>
+          <p class="endereco-completo">Av. Carlos Caldeira Filho, 4261 &bull; Capão Redondo, São Paulo – SP, CEP 05865-000</p>
+        </div>
+
+        <div class="guia-transporte">
+          
+          <article class="transporte-item">
+            <div class="transporte-cabeca">
+              <span class="icone-texto">METRÔ</span>
+              <h3 class="transporte-nome">Linha 5–Lilás</h3>
+            </div>
+            <p class="transporte-desc">
+              Desembarque na estação final <strong>Capão Redondo</strong>. Suba a escada rolante em direção à saída principal para a Avenida Carlos Caldeira Filho. A roda se forma a menos de 50 metros da catraca, na esplanada aberta.
+            </p>
+          </article>
+
+          <article class="transporte-item">
+            <div class="transporte-cabeca">
+              <span class="icone-texto">ÔNIBUS</span>
+              <h3 class="transporte-nome">Terminais e Linhas</h3>
+            </div>
+            <p class="transporte-desc">
+              Linhas com parada no Largo do Capão e na porta da estação: 647A-10 (Valo Velho), 647P-10 (Terminal Pinheiros), 6010-10 (Chácara Santa Maria), e ônibus vindos dos Terminais Capelinha, João Dias e Santo Amaro.
+            </p>
+          </article>
+
+          <article class="transporte-item alerta-cronograma">
+            <div class="transporte-cabeca">
+              <span class="icone-texto destaque">CRONOGRAMA</span>
+              <h3 class="transporte-nome">Horários de Rua</h3>
+            </div>
+            <p class="transporte-desc">
+              <strong>18h30:</strong> Abertura das inscrições dos MCs (chegue com antecedência, limite de vagas).<br>
+              <strong>18h50:</strong> Sorteio dos confrontos ao vivo.<br>
+              <strong>19h00:</strong> Início da primeira fase sem atraso.<br>
+              <strong>21h45:</strong> Final da noite e encerramento da roda.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+      <!-- Mapa Incorporado -->
+      <div class="mapa-coluna">
+        <div class="mapa-moldura">
+          <div class="mapa-cabecalho">
+            <span>Sinal de Satélite &bull; Capão Redondo</span>
+            <span class="coordenada-num">-23.6598, -46.7725</span>
+          </div>
+          <iframe
+            title="Localização do Metrô Capão Redondo"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.439502936725!2d-46.77258382379373!3d-23.660232478730997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce518742ca7b9d%3A0x696b0260492cb1f2!2sCap%C3%A3o%20Redondo!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+            class="mapa-frame"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="mapa-rodape">
+            <span>Referência: Em frente à passarela de pedestres</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Cartaz de Conduta de Rua: Pode vs Nao Pode -->
+    <section class="conduta-secao" aria-label="Conduta e Regras de Convivência">
+      
+      <div class="conduta-intro">
+        <span class="conduta-tag">Diretrizes da Quebrada</span>
+        <h2 class="conduta-titulo">O que fortalece e o que breca a roda</h2>
+        <p class="conduta-sub">
+          A calçada é de geral, mas a batalha tem postura. Leia com atenção antes de pisar no asfalto.
+        </p>
+      </div>
+
+      <div class="conduta-grade">
+        
+        <!-- Bloco PODE -->
+        <article class="conduta-painel painel-pode">
+          <div class="painel-topo">
+            <span class="painel-status">AUTORIZADO</span>
+            <h3 class="painel-titulo">PODE</h3>
+          </div>
+          <ul class="conduta-lista">
+            <li>Colar de bike, skate ou caminhando com a rapaziada da sua vila</li>
+            <li>Gravar vídeos, tirar fotos com analógica ou celular e marcar os MCs</li>
+            <li>Trazer cartaz ou bandeira em apoio aos manos e minas rimando</li>
+            <li>Gritar no júri popular, vaiar rima preconceituosa e ovacionar o verso pesado</li>
+            <li>Consumir dos ambulantes independentes da quebrada no entorno da praça</li>
+            <li>Chegar na contenção e somar na limpeza das garrafas ao final da edição</li>
+          </ul>
+        </article>
+
+        <!-- Bloco NAO PODE -->
+        <article class="conduta-painel painel-nao-pode">
+          <div class="painel-topo">
+            <span class="painel-status">VETADO</span>
+            <h3 class="painel-titulo">NÃO PODE</h3>
+          </div>
+          <ul class="conduta-lista">
+            <li>Racismo, machismo, homofobia ou transfobia: expulsão sumária da roda</li>
+            <li>Caixa de som bluetooth ligada disputando volume com o PA da batalha</li>
+            <li>Garrafas e recipientes de vidro no meio da roda que possam quebrar no chão</li>
+            <li>Desrespeitar a decisão soberana do júri popular ou ameaçar MCs da chave</li>
+            <li>Venda de substâncias ilícitas dentro do raio de gravação da equipe</li>
+            <li>Empurrões desnecessários na grade durante as rimas mais inflamadas</li>
+          </ul>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Rodape estruturado -->
+  <footer class="rodape">
+    <div class="rodape-principal">
+      <div class="rodape-festival">
+        <span class="rodape-nome">BDC – Batalha do Capão</span>
+        <span class="rodape-local">Metrô Capão Redondo &bull; Linha 5–Lilás &bull; Zona Sul / SP</span>
+      </div>
+
+      <div class="rodape-creditos">
+        <span class="rodape-dupla">Projeto desenvolvido por <strong>[Nome 1]</strong> e <strong>[Nome 2]</strong></span>
+        <span class="rodape-ano">Temporada 2026</span>
+      </div>
+    </div>
+
+    <div class="rodape-secundario">
+      <span>Cultura Hip-Hop Independente</span>
+      <span>Sem fins lucrativos &bull; Toda terça-feira às 19h</span>
+    </div>
+  </footer>
+
+  <!-- Script compartilhado -->
+  <script src="../script.js"></script>
+</body>
+</html>

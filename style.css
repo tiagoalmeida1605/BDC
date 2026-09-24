@@ -1,0 +1,626 @@
+/* ==========================================================================
+   BDC - BATALHA DO CAPAO
+   Folha de Estilos Autoral | Direcao de Arte Urbana e Brutalista
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variaveis Globais e Paleta Oficial
+   -------------------------------------------------------------------------- */
+:root {
+  --roxo-profundo: #2B0B3F;
+  --roxo-neon: #A020F0;
+  --rosa-neon: #FF2E97;
+  --preto-puro: #0D0D0D;
+  --branco-sujo: #F2F2F2;
+
+  --fonte-titulos: 'Sedgwick Ave', cursive;
+  --fonte-textos: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --borda-solida: 2px solid var(--roxo-neon);
+  --borda-fina: 1px solid var(--roxo-profundo);
+  --espacamento-bloco: 4rem;
+}
+
+/* --------------------------------------------------------------------------
+   Reset Essencial e Tipografia Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--preto-puro);
+  color: var(--branco-sujo);
+  font-family: var(--fonte-textos);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--preto-puro);
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Cabecalho e Navegacao Superior
+   -------------------------------------------------------------------------- */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  background-color: var(--preto-puro);
+  border-bottom: 2px solid var(--roxo-profundo);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cabecalho-marca {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.cabecalho-sigla {
+  font-family: var(--fonte-titulos);
+  font-size: 2.25rem;
+  line-height: 1;
+  color: var(--rosa-neon);
+  letter-spacing: 2px;
+}
+
+.cabecalho-nome {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: var(--branco-sujo);
+  border-left: 1px solid var(--roxo-profundo);
+  padding-left: 0.75rem;
+}
+
+.navegacao {
+  display: flex;
+  align-items: center;
+}
+
+.menu-lista {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu-link {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--branco-sujo);
+  padding: 0.25rem 0;
+  position: relative;
+  transition: color 0.15s ease;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--rosa-neon);
+}
+
+.menu-link.ativo {
+  color: var(--roxo-neon);
+  border-bottom: 2px solid var(--roxo-neon);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--roxo-neon);
+  color: var(--branco-sujo);
+  font-family: var(--fonte-textos);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Faixa de Alerta Urbano
+   -------------------------------------------------------------------------- */
+.faixa-aviso {
+  background-color: var(--roxo-profundo);
+  border-bottom: 1px solid var(--roxo-neon);
+  padding: 0.5rem 2rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.faixa-aviso span {
+  color: var(--branco-sujo);
+}
+
+.faixa-aviso .destaque-linha {
+  color: var(--rosa-neon);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Editorial e Assimetrico
+   -------------------------------------------------------------------------- */
+.hero {
+  padding: 3.5rem 2rem 4rem;
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.hero-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tag-localizacao {
+  display: inline-block;
+  background-color: var(--preto-puro);
+  border: 1px solid var(--roxo-neon);
+  color: var(--branco-sujo);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.hero-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(3.2rem, 7vw, 6.2rem);
+  line-height: 0.95;
+  color: var(--branco-sujo);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+}
+
+.hero-titulo .palavra-destaque {
+  color: var(--rosa-neon);
+  display: block;
+}
+
+.chamada-principal {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--branco-sujo);
+  max-width: 34ch;
+  border-left: 3px solid var(--rosa-neon);
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero-coordenadas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1.25rem;
+  background-color: var(--roxo-profundo);
+  border: 1px solid var(--roxo-neon);
+  width: 100%;
+  max-width: 480px;
+}
+
+.dado-evento {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(242, 242, 242, 0.2);
+  padding-bottom: 0.4rem;
+  font-size: 0.875rem;
+}
+
+.dado-evento:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.rotulo-dado {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--rosa-neon);
+  font-size: 0.75rem;
+}
+
+.valor-dado {
+  font-weight: 600;
+  color: var(--branco-sujo);
+  text-align: right;
+}
+
+.botao-destaque {
+  display: inline-block;
+  background-color: var(--roxo-neon);
+  color: var(--branco-sujo);
+  font-family: var(--fonte-textos);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 1.125rem 2.25rem;
+  border: none;
+  cursor: pointer;
+  border-bottom: 4px solid var(--rosa-neon);
+  transition: transform 0.1s ease, background-color 0.15s ease;
+}
+
+.botao-destaque:hover,
+.botao-destaque:focus {
+  background-color: var(--rosa-neon);
+  border-bottom-color: var(--branco-sujo);
+  transform: translateY(-2px);
+}
+
+.hero-midia {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.moldura-foto {
+  border: 2px solid var(--roxo-neon);
+  background-color: var(--roxo-profundo);
+  position: relative;
+  overflow: hidden;
+}
+
+.foto-batalha {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: contrast(1.15) brightness(0.95);
+}
+
+.legenda-midia {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--branco-sujo);
+  opacity: 0.7;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------------------------------
+   Secao de Destaques Estruturais (Sem cards genericos, assimetrica)
+   -------------------------------------------------------------------------- */
+.destaques {
+  background-color: var(--roxo-profundo);
+  border-top: 2px solid var(--roxo-neon);
+  border-bottom: 2px solid var(--roxo-neon);
+  padding: var(--espacamento-bloco) 2rem;
+}
+
+.destaques-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.secao-cabecalho {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(242, 242, 242, 0.2);
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.secao-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  line-height: 1;
+}
+
+.secao-subtitulo {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--rosa-neon);
+  font-weight: 700;
+}
+
+.destaques-grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-left: 2px solid var(--roxo-neon);
+}
+
+.destaque-coluna {
+  border-right: 2px solid var(--roxo-neon);
+  padding: 2.5rem 2rem;
+  background-color: var(--preto-puro);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+}
+
+.destaque-coluna:nth-child(2) {
+  background-color: #12051b;
+}
+
+.destaque-indice {
+  font-family: var(--fonte-titulos);
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--rosa-neon);
+  margin-bottom: 1.5rem;
+}
+
+.destaque-nome {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--branco-sujo);
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.destaque-texto {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--branco-sujo);
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   Manifesto da Quebrada (Bloco Editorial Tipografico)
+   -------------------------------------------------------------------------- */
+.manifesto {
+  padding: var(--espacamento-bloco) 2rem;
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.manifesto-box {
+  border: 1px solid var(--roxo-profundo);
+  background-color: var(--preto-puro);
+  padding: 3rem;
+  position: relative;
+}
+
+.manifesto-box::before {
+  content: "IDEOLOGIA";
+  position: absolute;
+  top: -0.75rem;
+  left: 2rem;
+  background-color: var(--preto-puro);
+  padding: 0 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  color: var(--rosa-neon);
+}
+
+.manifesto-texto {
+  font-size: clamp(1.125rem, 2.2vw, 1.625rem);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--branco-sujo);
+  max-width: 48ch;
+}
+
+.manifesto-texto strong {
+  color: var(--rosa-neon);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Rodape Estruturado com Flexbox
+   -------------------------------------------------------------------------- */
+.rodape {
+  margin-top: auto;
+  background-color: var(--preto-puro);
+  border-top: 2px solid var(--roxo-neon);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rodape-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.rodape-festival {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rodape-nome {
+  font-family: var(--fonte-titulos);
+  font-size: 1.75rem;
+  color: var(--branco-sujo);
+  line-height: 1;
+}
+
+.rodape-local {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--branco-sujo);
+  opacity: 0.75;
+}
+
+.rodape-creditos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: right;
+}
+
+.rodape-dupla {
+  font-size: 0.875rem;
+  color: var(--branco-sujo);
+}
+
+.rodape-dupla strong {
+  color: var(--rosa-neon);
+  font-weight: 600;
+}
+
+.rodape-ano {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--roxo-neon);
+  font-weight: 700;
+}
+
+.rodape-secundario {
+  max-width: 1320px;
+  margin: 0 auto;
+  width: 100%;
+  border-top: 1px solid var(--roxo-profundo);
+  padding-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--branco-sujo);
+  opacity: 0.6;
+}
+
+/* --------------------------------------------------------------------------
+   Responsividade Mobile-First
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .foto-batalha {
+    aspect-ratio: 16 / 9;
+  }
+
+  .destaques-grade {
+    grid-template-columns: 1fr;
+    border-left: none;
+    border-top: 2px solid var(--roxo-neon);
+  }
+
+  .destaque-coluna {
+    border-right: none;
+    border-bottom: 2px solid var(--roxo-neon);
+    min-height: auto;
+  }
+
+  .destaque-coluna:last-child {
+    border-bottom: none;
+  }
+
+  .rodape-creditos {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .cabecalho {
+    padding: 1rem 1.25rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navegacao {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--preto-puro);
+    border-bottom: 2px solid var(--roxo-neon);
+    padding: 1.5rem;
+    display: none;
+  }
+
+  .navegacao.aberto {
+    display: block;
+  }
+
+  .menu-lista {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .hero {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .destaques {
+    padding: 3rem 1.25rem;
+  }
+
+  .manifesto {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .manifesto-box {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .rodape {
+    padding: 2rem 1.25rem;
+  }
+}

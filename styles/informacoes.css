@@ -1,0 +1,378 @@
+/* ==========================================================================
+   BDC - BATALHA DO CAPAO | informacoes.css
+   Estilos exclusivos da pagina de Informacoes, Rotas e Conduta de Rua
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Estrutura Geral
+   -------------------------------------------------------------------------- */
+.info-pagina {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+  width: 100%;
+}
+
+.info-topo {
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--roxo-neon);
+  padding-bottom: 2rem;
+}
+
+.info-etiqueta {
+  display: inline-block;
+  background-color: var(--roxo-profundo);
+  border: 1px solid var(--roxo-neon);
+  color: var(--rosa-neon);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.info-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  margin-bottom: 1.25rem;
+}
+
+.info-subtexto {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--branco-sujo);
+  opacity: 0.9;
+  max-width: 52ch;
+  border-left: 3px solid var(--rosa-neon);
+  padding-left: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Grade de Localizacao e Rotas
+   -------------------------------------------------------------------------- */
+.local-grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 5rem;
+  align-items: start;
+}
+
+.rotas-coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.endereco-bloco {
+  background-color: var(--roxo-profundo);
+  border: 2px solid var(--roxo-neon);
+  padding: 2rem;
+}
+
+.sub-etiqueta {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--rosa-neon);
+  font-weight: 800;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.endereco-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--branco-sujo);
+  margin-bottom: 0.75rem;
+}
+
+.endereco-linha {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--rosa-neon);
+  margin-bottom: 0.5rem;
+}
+
+.endereco-completo {
+  font-size: 0.875rem;
+  color: var(--branco-sujo);
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.guia-transporte {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.transporte-item {
+  background-color: var(--preto-puro);
+  border: 1px solid var(--roxo-profundo);
+  border-left: 3px solid var(--roxo-neon);
+  padding: 1.25rem 1.5rem;
+}
+
+.transporte-item.alerta-cronograma {
+  border-left-color: var(--rosa-neon);
+  background-color: #120417;
+}
+
+.transporte-cabeca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.icone-texto {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--roxo-profundo);
+  color: var(--branco-sujo);
+  border: 1px solid var(--roxo-neon);
+}
+
+.icone-texto.destaque {
+  background-color: var(--rosa-neon);
+  color: var(--preto-puro);
+  border-color: var(--rosa-neon);
+}
+
+.transporte-nome {
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--branco-sujo);
+}
+
+.transporte-desc {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--branco-sujo);
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   Mapa Incorporado
+   -------------------------------------------------------------------------- */
+.mapa-coluna {
+  position: sticky;
+  top: 6rem;
+}
+
+.mapa-moldura {
+  border: 2px solid var(--roxo-neon);
+  background-color: var(--preto-puro);
+  display: flex;
+  flex-direction: column;
+}
+
+.mapa-cabecalho {
+  background-color: var(--roxo-profundo);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--branco-sujo);
+  font-weight: 600;
+  border-bottom: 1px solid var(--roxo-neon);
+}
+
+.coordenada-num {
+  font-family: monospace;
+  color: var(--rosa-neon);
+}
+
+.mapa-frame {
+  width: 100%;
+  height: 420px;
+  border: none;
+  filter: invert(90%) hue-rotate(180deg) contrast(1.15) brightness(0.85);
+}
+
+.mapa-rodape {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--branco-sujo);
+  opacity: 0.7;
+  border-top: 1px solid var(--roxo-profundo);
+}
+
+/* --------------------------------------------------------------------------
+   Cartaz de Conduta: PODE vs NAO PODE
+   -------------------------------------------------------------------------- */
+.conduta-secao {
+  border-top: 2px solid var(--roxo-neon);
+  padding-top: 4rem;
+}
+
+.conduta-intro {
+  margin-bottom: 2.5rem;
+}
+
+.conduta-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: var(--rosa-neon);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.conduta-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  margin-bottom: 0.75rem;
+}
+
+.conduta-sub {
+  font-size: 1rem;
+  color: var(--branco-sujo);
+  opacity: 0.85;
+}
+
+.conduta-grade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.conduta-painel {
+  background-color: var(--preto-puro);
+  border: 2px solid var(--roxo-neon);
+  padding: 2.5rem 2rem;
+}
+
+.conduta-painel.painel-pode {
+  border-top: 6px solid var(--roxo-neon);
+}
+
+.conduta-painel.painel-nao-pode {
+  border-top: 6px solid var(--rosa-neon);
+  background-color: #12030d;
+}
+
+.painel-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(242, 242, 242, 0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.painel-status {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  opacity: 0.7;
+}
+
+.painel-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: 2.75rem;
+  line-height: 1;
+  color: var(--branco-sujo);
+}
+
+.painel-pode .painel-titulo {
+  color: var(--branco-sujo);
+}
+
+.painel-nao-pode .painel-titulo {
+  color: var(--rosa-neon);
+}
+
+.conduta-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.conduta-lista li {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--branco-sujo);
+  opacity: 0.9;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.painel-pode .conduta-lista li::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 800;
+  color: var(--roxo-neon);
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.painel-nao-pode .conduta-lista li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 800;
+  color: var(--rosa-neon);
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+/* --------------------------------------------------------------------------
+   Responsividade
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .local-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .mapa-coluna {
+    position: static;
+  }
+
+  .conduta-grade {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .info-pagina {
+    padding: 2rem 1.25rem 3.5rem;
+  }
+
+  .endereco-bloco {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .mapa-frame {
+    height: 300px;
+  }
+
+  .conduta-painel {
+    padding: 2rem 1.25rem;
+  }
+}

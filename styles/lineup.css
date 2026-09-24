@@ -1,0 +1,287 @@
+/* ==========================================================================
+   BDC - BATALHA DO CAPAO | lineup.css
+   Estilos exclusivos da pagina de Line-up e Chave de MCs
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Estrutura da Pagina de Line-up
+   -------------------------------------------------------------------------- */
+.lineup-pagina {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 5rem;
+  width: 100%;
+}
+
+.lineup-topo {
+  margin-bottom: 3.5rem;
+  border-bottom: 2px solid var(--roxo-neon);
+  padding-bottom: 2rem;
+}
+
+.lineup-etiqueta {
+  display: inline-block;
+  background-color: var(--roxo-profundo);
+  border: 1px solid var(--roxo-neon);
+  color: var(--rosa-neon);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.lineup-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+  margin-bottom: 1.25rem;
+}
+
+.lineup-subtexto {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--branco-sujo);
+  opacity: 0.9;
+  max-width: 48ch;
+  border-left: 3px solid var(--rosa-neon);
+  padding-left: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Grade Assimetrica de Artistas (Sem cards repetitivos)
+   -------------------------------------------------------------------------- */
+.lineup-grade {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.roster-item {
+  background-color: var(--preto-puro);
+  border: 2px solid var(--roxo-neon);
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: stretch;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.roster-item:hover {
+  border-color: var(--rosa-neon);
+}
+
+.roster-item.destaque-funcao {
+  border-color: var(--rosa-neon);
+  background-color: #13031d;
+}
+
+.roster-midia {
+  position: relative;
+  background-color: var(--roxo-profundo);
+  overflow: hidden;
+  border-right: 1px solid var(--roxo-profundo);
+}
+
+.roster-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(80%) contrast(1.2) brightness(0.9);
+  transition: filter 0.25s ease;
+}
+
+.roster-item:hover .roster-foto {
+  filter: grayscale(0%) contrast(1.15) brightness(1);
+}
+
+.roster-papel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--preto-puro);
+  color: var(--branco-sujo);
+  font-size: 0.625rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.25rem 0.5rem;
+  border-right: 1px solid var(--roxo-neon);
+  border-bottom: 1px solid var(--roxo-neon);
+}
+
+.roster-papel.especial {
+  background-color: var(--roxo-neon);
+  color: var(--branco-sujo);
+}
+
+.roster-dados {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.roster-cabeca {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.roster-num {
+  font-family: var(--fonte-titulos);
+  font-size: 1.5rem;
+  color: var(--rosa-neon);
+  line-height: 1;
+}
+
+.roster-nome {
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--branco-sujo);
+  line-height: 1.2;
+}
+
+.roster-origem {
+  font-size: 0.8125rem;
+  color: var(--branco-sujo);
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+}
+
+.roster-detalhes {
+  border-top: 1px dashed rgba(242, 242, 242, 0.18);
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+}
+
+.roster-info {
+  color: var(--branco-sujo);
+  opacity: 0.85;
+}
+
+.roster-info strong {
+  color: var(--roxo-neon);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  margin-right: 0.35rem;
+}
+
+/* --------------------------------------------------------------------------
+   Bloco Editorial: Vagas 09 a 16 do Sorteio
+   -------------------------------------------------------------------------- */
+.sorteio-aviso {
+  background-color: var(--roxo-profundo);
+  border: 2px solid var(--roxo-neon);
+  padding: 3rem;
+  position: relative;
+}
+
+.sorteio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sorteio-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  color: var(--rosa-neon);
+}
+
+.sorteio-titulo {
+  font-family: var(--fonte-titulos);
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--branco-sujo);
+}
+
+.sorteio-descricao {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--branco-sujo);
+  opacity: 0.9;
+  max-width: 58ch;
+}
+
+.sorteio-regras {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  border-top: 1px solid rgba(242, 242, 242, 0.2);
+  padding-top: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.sorteio-regra-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background-color: var(--preto-puro);
+  border-left: 2px solid var(--rosa-neon);
+  padding: 0.75rem 1rem;
+}
+
+.regra-num {
+  font-family: var(--fonte-titulos);
+  font-size: 1.35rem;
+  color: var(--rosa-neon);
+  line-height: 1;
+}
+
+.regra-txt {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--branco-sujo);
+}
+
+/* --------------------------------------------------------------------------
+   Responsividade
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .lineup-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .sorteio-regras {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .lineup-pagina {
+    padding: 2rem 1.25rem 3.5rem;
+  }
+
+  .roster-item {
+    grid-template-columns: 1fr;
+  }
+
+  .roster-midia {
+    height: 190px;
+    border-right: none;
+    border-bottom: 1px solid var(--roxo-neon);
+  }
+
+  .sorteio-aviso {
+    padding: 1.75rem 1.25rem;
+  }
+}
