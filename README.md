@@ -1,6 +1,6 @@
 # BDC – Batalha do Capão'
 
-**Dupla:** [Nome 1] e [Nome 2]
+**Trio:** Tiago Silvestre, João Pedro e Alexandre Ferreira
 **Site publicado:** [link da Vercel — deixe esse espaço para preencher depois]
 
 ## Briefing
